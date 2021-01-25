@@ -20,7 +20,6 @@ console.log(`В списке ${listCount} категории.`);
 itemsListRef.forEach(item => {
     const titleTextContent = item.firstElementChild.textContent;
     const elementCount = item.lastElementChild.children.length;
-    console.log(`Категория: ${titleTextContent} 
-Количество элементов: ${elementCount}`); 
+    console.log(`Категория: ${titleTextContent} \nКоличество элементов: ${elementCount}`); 
 });
 
