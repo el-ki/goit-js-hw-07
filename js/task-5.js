@@ -13,8 +13,8 @@ inputRef.addEventListener('input', () => {
         spanRef.textContent = 'незнакомец'
     } else {
         spanRef.textContent = inputRef.value
-    }
-    return spanRef.textContent
-})
+    };
+    return spanRef.textContent;
+});
 
 

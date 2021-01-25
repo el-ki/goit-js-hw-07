@@ -40,18 +40,15 @@ const ulRef = document.querySelector('#gallery');
 // ulRef.append(...liRef);
 // console.log(ulRef);
 
-// 2 решение с reduce 
+// 2 решение с insertAdjacentHTML() 
 
 const liRef = images
-    .reduce((tags, image) => { 
-    const itemRef = document.createElement('li');
-    tags.push(itemRef);
-    const imgRef = document.createElement('img');
-    imgRef.setAttribute('url', image.url);
-    imgRef.setAttribute('alt', image.alt);
-    itemRef.appendChild(imgRef);
-    return tags
-    }, [])
+    .map(image => {
+        const itemRef = document.createElement('li')
+        itemRef.insertAdjacentHTML('afterbegin', `<img url = "${image.url}" alt = "${image.alt}">`)
+        return itemRef
+    });
 
 ulRef.append(...liRef);
+console.log(liRef);
 console.log(ulRef);

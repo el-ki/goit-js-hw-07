@@ -26,10 +26,10 @@ function decrement(counterValue) {
     return counterValueRef.textContent = counterValue
 };
 
-decrementBtn.addEventListener('click', (event) => { 
+decrementBtn.addEventListener('click', (event) => {
     counterValue = decrement(counterValue);
-})
+});
 
-incrementBtn.addEventListener('click', () => { 
+incrementBtn.addEventListener('click', () => {
     counterValue = increment(counterValue);
-})
+});

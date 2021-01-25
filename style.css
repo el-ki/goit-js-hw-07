@@ -3,6 +3,9 @@
   flex-direction: row;
   list-style: none;
 }
+img {
+  width: 90%;
+}
 
 #validation-input {
   border: 3px solid #bdbdbd;
