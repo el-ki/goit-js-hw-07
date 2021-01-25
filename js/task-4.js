@@ -26,7 +26,7 @@ function decrement(counterValue) {
     return counterValueRef.textContent = counterValue
 };
 
-decrementBtn.addEventListener('click', () => { 
+decrementBtn.addEventListener('click', (event) => { 
     counterValue = decrement(counterValue);
 })
 
