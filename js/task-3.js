@@ -26,15 +26,32 @@ const images = [
 ];
 
 const ulRef = document.querySelector('#gallery');
+// 1 решение с map
 
-const liRef = images.map(image => { 
+// const liRef = images.map(image => { 
+//     const itemRef = document.createElement('li');
+//     const imgRef = document.createElement('img');
+//     imgRef.setAttribute('url', image.url);
+//     imgRef.setAttribute('alt', image.alt);
+//     itemRef.appendChild(imgRef);
+//     return itemRef
+//     })
+
+// ulRef.append(...liRef);
+// console.log(ulRef);
+
+// 2 решение с reduce 
+
+const liRef = images
+    .reduce((tags, image) => { 
     const itemRef = document.createElement('li');
+    tags.push(itemRef);
     const imgRef = document.createElement('img');
     imgRef.setAttribute('url', image.url);
     imgRef.setAttribute('alt', image.alt);
     itemRef.appendChild(imgRef);
-    return itemRef
-    })
+    return tags
+    }, [])
 
 ulRef.append(...liRef);
 console.log(ulRef);
