@@ -50,5 +50,4 @@ const liRef = images
     });
 
 ulRef.append(...liRef);
-console.log(liRef);
 console.log(ulRef);
