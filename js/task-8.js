@@ -59,9 +59,12 @@ const createBoxes = function(amount) {
 
 const destroyBoxes = () => { 
     boxesDivRef.innerHTML = ""
+    arrayNew = [];
+    width = 20;
+    height = 20;
     return boxesDivRef;
-
 }
+
 inputRef.addEventListener('input', event => {
     amount = event.target.value;
     console.log(amount);
@@ -69,13 +72,11 @@ inputRef.addEventListener('input', event => {
 
 createBtn.addEventListener('click', () => {
     createBoxes(amount);
-    amount = 0;
     inputRef.value = '';
 });
 
 
 clearBtn.addEventListener('click', () => { 
     destroyBoxes();
-    amount = 0;
     inputRef.value = '';
 })
