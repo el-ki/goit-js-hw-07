@@ -45,7 +45,7 @@ const ulRef = document.querySelector('#gallery');
 const liRef = images
     .map(image => {
         const itemRef = document.createElement('li')
-        itemRef.insertAdjacentHTML('afterbegin', `<img url = "${image.url}" alt = "${image.alt}">`)
+        itemRef.insertAdjacentHTML('afterbegin', `<img src = "${image.url}" alt = "${image.alt}">`)
         return itemRef
     });
 

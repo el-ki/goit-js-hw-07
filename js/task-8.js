@@ -32,7 +32,6 @@ let width = 20;
 let height = 20;
 let amount = 0
 
-
 function randomBackgroundColor() {
     const x = Math.floor(Math.random() * 256);
     const y = Math.floor(Math.random() * 256);
@@ -42,7 +41,6 @@ function randomBackgroundColor() {
 }
 
 const createBoxes = function(amount) { 
-    
     for (let i = 0; i < amount; i++) { 
         const newDivRef = document.createElement('div')
         arrayNew.push(newDivRef);
@@ -67,14 +65,12 @@ const destroyBoxes = () => {
 
 inputRef.addEventListener('input', event => {
     amount = event.target.value;
-    console.log(amount);
     });
 
 createBtn.addEventListener('click', () => {
     createBoxes(amount);
     inputRef.value = '';
 });
-
 
 clearBtn.addEventListener('click', () => { 
     destroyBoxes();

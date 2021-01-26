@@ -17,3 +17,16 @@ img {
 #validation-input.invalid {
   border-color: #f44336;
 }
+
+#font-size-control {
+  display: flex;
+  margin-top: 10px;
+}
+
+#categories {
+  list-style: none;
+}
+
+#counter {
+  padding-bottom: 10px;
+}
