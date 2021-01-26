@@ -68,5 +68,10 @@ const createBoxes = function(amount) {
 console.log(createBoxes(5));
 
 
+const destroyBoxes = () => { 
+    boxesDivRef.innerHTML = ""
+    return boxesDivRef;
 
+}
 
+console.log(destroyBoxes());
