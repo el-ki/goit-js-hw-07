@@ -22,20 +22,15 @@
 // <div id="boxes"></div>
 
 
-const controlDivRef = document.querySelector('#controls');
+const inputRef = document.querySelector('#controls input');
 const boxesDivRef = document.querySelector('#boxes')
 const createBtn = document.querySelector('button[data-action="render"]');
 const clearBtn = document.querySelector('button[data-action="destroy"]');
 
-
-
-console.log(controlDivRef);
-console.log(boxesDivRef);
-console.log(createBtn);
-console.log(clearBtn);
 let arrayNew = [];
 let width = 20;
 let height = 20;
+let amount = 0
 
 
 function randomBackgroundColor() {
@@ -45,9 +40,6 @@ function randomBackgroundColor() {
     const backgroundColor = `rgb(${x}, ${y}, ${z})`;
     return backgroundColor
 }
-
-  console.log(randomBackgroundColor());
-
 
 const createBoxes = function(amount) { 
     
@@ -65,13 +57,25 @@ const createBoxes = function(amount) {
     return boxesDivRef
 } 
 
-console.log(createBoxes(5));
-
-
 const destroyBoxes = () => { 
     boxesDivRef.innerHTML = ""
     return boxesDivRef;
 
 }
+inputRef.addEventListener('input', event => {
+    amount = event.target.value;
+    console.log(amount);
+    });
 
-console.log(destroyBoxes());
+createBtn.addEventListener('click', () => {
+    createBoxes(amount);
+    amount = 0;
+    inputRef.value = '';
+});
+
+
+clearBtn.addEventListener('click', () => { 
+    destroyBoxes();
+    amount = 0;
+    inputRef.value = '';
+})
