@@ -18,12 +18,12 @@ let counterValue = Number(counterValueRef.textContent);
 
 function increment(counterValue) { 
      counterValue += 1;
-    return counterValueRef.textContent = counterValue
+     counterValueRef.textContent = counterValue
 };
 
 function decrement(counterValue) { 
      counterValue -= 1;
-    return counterValueRef.textContent = counterValue
+     counterValueRef.textContent = counterValue
 };
 
 decrementBtn.addEventListener('click', () => {
