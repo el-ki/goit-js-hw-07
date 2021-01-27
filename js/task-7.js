@@ -6,10 +6,10 @@
 // <br />
 // <span id="text">Абракадабра!</span>
 
-const inputRef = document.querySelector('#font-size-control')
-const spanRef = document.querySelector('#text')
+const inputRef = document.querySelector('#font-size-control');
+const spanRef = document.querySelector('#text');
 
 inputRef.addEventListener('input', event => {
-    const value = event.target.value
-    spanRef.style.fontSize = `${value / 3}px`
+    const value = event.target.value;
+    spanRef.style.fontSize = `${value / 3}px`;
 });

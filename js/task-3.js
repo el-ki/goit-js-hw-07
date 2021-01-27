@@ -42,9 +42,15 @@ const ulRef = document.querySelector('#gallery');
 
 // 2 решение с insertAdjacentHTML() 
 
-const liRef = images
-    .map(image => {
-        ulRef.insertAdjacentHTML('afterbegin', `<li><img src = "${image.url}" alt = "${image.alt}"></li>`)
-        return ulRef
+const liRef = images.reverse().map(image => {
+  ulRef.insertAdjacentHTML('afterbegin', `<li><img src = "${image.url}" alt = "${image.alt}"></li>`);
+  return ulRef;
     });
 console.log(ulRef);
+
+// const tagStringArr = images.map(
+//   image => `<li class="item"><img src="${image.url}" alt="${image.alt}"></li>`,
+// );
+
+// const galleryRef = document.querySelector('#gallery');
+// galleryRef.insertAdjacentHTML('afterbegin', tagStringArr.join(''));

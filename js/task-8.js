@@ -40,21 +40,24 @@ function randomBackgroundColor() {
     return backgroundColor
 }
 
-const createBoxes = function(amount) { 
-    for (let i = 0; i < amount; i++) { 
-        const newDivRef = document.createElement('div')
-        arrayNew.push(newDivRef);
-    }  arrayNew.map(div => { 
+const createBoxes = function (amount) { 
+    
+    [...new Array(amount)].reduce((acc, div) => {
+        div = document.createElement('div');
+        acc.push(div);
+        arrayNew = acc;
+        return arrayNew;
+    }, [])
+      .map(div => { 
         div.style.backgroundColor = randomBackgroundColor();
         width += 10;
         height += 10;
         div.style.width = width + 'px';
         div.style.height = height + 'px';
     })
-    boxesDivRef.append(...arrayNew)
-    return boxesDivRef
-} 
-
+    boxesDivRef.append(...arrayNew);
+    return boxesDivRef;
+}
 const destroyBoxes = () => { 
     boxesDivRef.innerHTML = ""
     arrayNew = [];
@@ -64,7 +67,7 @@ const destroyBoxes = () => {
 }
 
 inputRef.addEventListener('input', event => {
-    amount = event.target.value;
+    amount = Number(event.target.value);
     });
 
 createBtn.addEventListener('click', () => {
@@ -76,3 +79,6 @@ clearBtn.addEventListener('click', () => {
     destroyBoxes();
     inputRef.value = '';
 })
+
+
+
