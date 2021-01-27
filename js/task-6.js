@@ -25,11 +25,11 @@
 const inputRef = document.querySelector('#validation-input')
 
 inputRef.addEventListener('blur', event => {
-    const value = event.target.value
+    const value = event.target.value;
     if (value.length === Number(inputRef.dataset.length)) {
-        inputRef.classList.add('valid')
+        inputRef.classList.add('valid');
     } else {
-      inputRef.classList.add('invalid')  
+        inputRef.classList.add('invalid');
     };
 });
 

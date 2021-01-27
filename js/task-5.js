@@ -10,9 +10,9 @@ const spanRef = document.querySelector('#name-output')
 
 inputRef.addEventListener('input', () => {
     if (!inputRef.value) {
-        spanRef.textContent = 'незнакомец'
+        spanRef.textContent = 'незнакомец';
     } else {
-        spanRef.textContent = inputRef.value
+        spanRef.textContent = inputRef.value;
     };
     spanRef.textContent;
 });
