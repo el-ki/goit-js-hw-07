@@ -16,20 +16,16 @@ const counterValueRef = document.querySelector('#value')
 
 let counterValue = Number(counterValueRef.textContent);
 
-function increment(counterValue) { 
-     counterValue += 1;
-    return counterValueRef.textContent = counterValue;
+function increment() { 
+    counterValue += 1;
+    counterValueRef.textContent = counterValue;
 };
 
-function decrement(counterValue) { 
-     counterValue -= 1;
-    return counterValueRef.textContent = counterValue;
+function decrement() { 
+    counterValue -= 1;
+    counterValueRef.textContent = counterValue;
 };
 
-decrementBtn.addEventListener('click', () => {
-    counterValue = decrement(counterValue);
-});
+decrementBtn.addEventListener('click', decrement);
 
-incrementBtn.addEventListener('click', () => {
-    counterValue = increment(counterValue);
-});
+incrementBtn.addEventListener('click', increment);

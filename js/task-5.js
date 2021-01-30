@@ -14,7 +14,6 @@ inputRef.addEventListener('input', () => {
     } else {
         spanRef.textContent = inputRef.value;
     };
-    spanRef.textContent;
 });
 
 
